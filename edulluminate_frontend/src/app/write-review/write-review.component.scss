@@ -1,0 +1,21 @@
+.review-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.rating-input {
+    padding: 0 10px;
+}
+
+.review-text-input {
+    grid-column: 1/6;
+}
+
+form button {
+    border-radius: 25px;
+    height: 40px;
+}
+
+.hint {
+    padding-left: 10px;
+}

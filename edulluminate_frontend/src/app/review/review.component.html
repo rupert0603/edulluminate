@@ -1,0 +1,318 @@
+<mat-card class="review" appearance="outlined">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title>Anonymous</mat-card-title>
+      <mat-card-subtitle>Date Submitted: {{ review.createdAt | date }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="review-text">
+      <p>{{ review.review }}</p>
+    </mat-card-content>
+
+    <mat-divider class="divider"></mat-divider>
+
+    <!-- <mat-card-actions align="end">
+      <button mat-button>Write a Review</button>
+    </mat-card-actions> -->
+
+    <mat-card-content class="ratings">
+        <mat-grid-list cols="4" rowHeight="4:2">
+            <mat-grid-tile>
+                <h3 class="rating-type">Academics</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.academicsRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.academicsRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Teachers</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.teachersRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.teachersRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Peer Quality</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.peerQualityRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.peerQualityRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Facilities</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.facilitiesRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.facilitiesRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Sports</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.sportsRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.sportsRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Clubs</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.clubsRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.clubsRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Student Life</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.studentLifeRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.studentLifeRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Location</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.locationRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.locationRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Staff</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.staffsRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.staffsRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <h3 class="rating-type">Food</h3>
+    
+                <div>
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [mode]="'determinate'"
+                        [value]="review.foodRating * 10">
+                    </mat-progress-spinner>
+                    <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                        {{ review.foodRating }}
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+    </mat-card-content>
+
+    <!-- <mat-card-content>
+        <h3 class="rating-type">Academics</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.academicsRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.academicsRating }}
+            </div>
+        </div>
+    </mat-card-content> -->
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Teachers</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.teachersRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.teachersRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Peer Quality</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.peerQualityRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.peerQualityRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Facilities</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.facilitiesRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.facilitiesRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Sports</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.sportsRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.sportsRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Clubs</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.clubsRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.clubsRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Student Life</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.studentLifeRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.studentLifeRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Location</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.locationRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.locationRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Staff</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.staffsRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.staffsRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+    <mat-card-content>
+        <!-- <h3 class="rating-type">Food</h3>
+    
+        <div>
+            <mat-progress-spinner
+                class="example-margin"
+                [mode]="'determinate'"
+                [value]="review.foodRating * 10">
+            </mat-progress-spinner>
+            <div style="position:relative; top: -60px; left: 30px;" class="rating">
+                {{ review.foodRating }}
+            </div>
+        </div> -->
+    </mat-card-content>
+
+</mat-card>
+
+
+<!-- https://stackoverflow.com/questions/54547166/text-inside-the-mat-progress-bar-in-angular-material -->

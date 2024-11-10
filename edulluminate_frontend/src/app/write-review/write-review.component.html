@@ -1,0 +1,84 @@
+<mat-card-content>
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+        <!-- @for (rating of ratings; track rating.name) {
+            <mat-form-field class="rating-input">
+                <mat-label>{{ rating.name }}</mat-label>
+                <input matInput type="number" max="10" min="0" value="{{ rating.value }}">
+            </mat-form-field>
+        } -->
+        <p class="hint">Give a rating from 0 to 10. All reviews are shown anonymously.</p>
+        <div class="review-form-container">
+        <mat-form-field class="rating-input">
+            <mat-label>Academics</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="academicsRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Teachers</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="teachersRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Peer Quality</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="peerQualityRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Facilities</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="facilitiesRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Sports</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="sportsRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Clubs</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="clubsRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Student Life</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="studentLifeRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Location</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="locationRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+            <mat-label>Staffs</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="staffsRating">
+        </mat-form-field>
+        
+        <mat-form-field class="rating-input">
+            <mat-label>Food</mat-label>
+            <input matInput type="number" max="10" min="0" formControlName="foodRating">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input review-text-input">
+            <mat-label>Write a review</mat-label>
+            <textarea matInput formControlName="review" rows="6"></textarea>
+        </mat-form-field>
+
+        </div>
+        <mat-card-actions align="end">
+            <button mat-raised-button type="submit">Submit</button>
+        </mat-card-actions>
+        
+    </form>
+    <!-- <form class="example-form">
+        <mat-form-field class="rating-input">
+            <mat-label>Favorite food</mat-label>
+            <input matInput type="number" max="10" min="0">
+        </mat-form-field>
+
+        <mat-form-field class="rating-input">
+          <mat-label>Leave a review</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </form>   <form class="example-form"> -->
+ 
+</mat-card-content>

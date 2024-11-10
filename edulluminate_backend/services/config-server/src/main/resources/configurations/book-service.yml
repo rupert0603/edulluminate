@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=book
+#    url: jdbc:postgresql://13.250.100.137:5432/edulluminate-prod?currentSchema=book
+#    username: postgres
+#    password: inday_bubu_77
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    #    hibernate:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8082

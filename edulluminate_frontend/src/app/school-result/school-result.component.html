@@ -1,0 +1,14 @@
+<mat-card class="search-result" appearance="outlined">
+    <mat-card-header>
+      <!-- <mat-card-title>{{ school.name }}</mat-card-title> -->
+
+      
+    <mat-card-title class="school-name">
+        <a routerLink="/school/{{school.id}}">
+            {{ school.name }}
+        </a>
+    </mat-card-title>
+
+      <mat-card-subtitle>{{ school.municipality }} {{ school.taxonomy }} {{ school.country }}</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>

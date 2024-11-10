@@ -1,0 +1,18 @@
+<div class="menu">
+<mat-tab-group animationDuration="0ms" (selectedTabChange)="onClick($event)" selectedIndex="{{ indexOfTabShown }}">
+    <mat-tab label="Chapter Companion">
+        <ng-template matTabContent>
+            <!-- <hello name="{{ name }}"></hello> -->
+             <app-chapter></app-chapter>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="End of Chapter Exercises">
+        <ng-template matTabContent>
+            <!-- <hello name="{{ name }}"></hello> -->
+            <app-questions></app-questions>
+        </ng-template>
+    </mat-tab>
+    <!-- <mat-tab label="Answer">Content 3</mat-tab> -->
+</mat-tab-group>
+<router-outlet></router-outlet>
+</div>

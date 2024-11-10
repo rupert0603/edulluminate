@@ -1,0 +1,31 @@
+<mat-toolbar class="nav-bar">
+  <!-- <button mat-icon-button class="example-icon" *ngIf="url.match(regexBookChapterRoute)"
+          (click)="toggle()" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button> -->
+  <div class="title">
+    <a routerLink="/">Edulluminate</a>
+  </div>
+  <section>
+    <div class="example-button-row">
+      <a routerLink="/" mat-flat-button>Schools</a>
+      <a routerLink="/books" mat-flat-button>Books</a>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+
+  @if(!keycloak.isLoggedIn()) {
+  <button mat-flat-button (click)="register()">
+    Register
+  </button>
+  <button mat-flat-button (click)="login()">
+    Login
+  </button>
+  } @else {
+    <button mat-flat-button (click)="logout()">
+      Logout
+    </button>
+  }
+</mat-toolbar>
+<!--https://stackoverflow.com/questions/48073057/open-close-sidenav-from-another-component-->

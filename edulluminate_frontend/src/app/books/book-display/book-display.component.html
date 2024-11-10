@@ -1,0 +1,19 @@
+<mat-card appearance="outlined" class="book-display">
+    <mat-card-header>
+      <mat-card-title>{{ bookSummary.name }}</mat-card-title>
+      <mat-card-subtitle>
+        @for(author of bookSummary.authors; track author.id) {
+            <span>{{author.lastName}}, {{ author.firstName }}</span>
+        }
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="chapters">
+        @for(chapter of bookSummary.chapters; track chapter.id){
+            <div class="chapter">
+                <a routerLink="/books/{{ bookSummary.id }}/chapter/{{ chapter.id }}/chapter-companion">
+                    Chapter {{ chapter.chapterOrder}}: {{ chapter.title }}
+                </a>
+            </div>
+        }
+    </mat-card-actions>
+</mat-card>

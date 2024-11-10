@@ -1,0 +1,10 @@
+<mat-card class="chapter-companion" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{ chapter.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+        <div [innerHTML]="chapter.content">
+            <!-- {{ chapter.content }} -->
+        </div>
+    </mat-card-content>
+</mat-card>

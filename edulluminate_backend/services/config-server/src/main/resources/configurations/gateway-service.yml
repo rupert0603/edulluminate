@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+            allowedHeaders: "*"
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: book-service
+          uri: lb:http://BOOK-SERVICE
+          predicates:
+            - Path=/api/v1/book-service/**
+        - id: school-service
+          uri: lb:http://SCHOOL-SERVICE
+          predicates:
+            - Path=/api/v1/school-service/**
+
+#https://stackoverflow:
+#  com/questions/61189793/spring-gateway-request-blocked-by-cors-no-acces0control-allow-orgin-header:
+
+server:
+  port: 8084

@@ -1,0 +1,10 @@
+spring:
+  config:
+    import: optional:configserver:http://54.151.152.174:8081
+  application:
+    name: book-service
+#  datasource:
+#    hikari:
+#      connectionTimeout: 60000
+#      idleTimeout: 600000
+#      maxLifeTime: 600000

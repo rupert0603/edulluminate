@@ -1,0 +1,25 @@
+<mat-accordion>
+    @for(question of questions; track question.id) {
+        <!-- <app-question [question]="question"></app-question> -->
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Question {{question.questionOrder}}</mat-panel-title>
+              <!-- <mat-panel-description>{{question.question}}</mat-panel-description> -->
+            </mat-expansion-panel-header>
+        
+            <ng-template matExpansionPanelContent>
+                <p>{{question.question}}</p>
+                <h3>Answer:</h3>
+                <app-answers [questionId]="question.id"></app-answers>
+              <!-- Some deferred content -->
+              <!-- <p>This is the primary content of the panel.</p> -->
+            </ng-template>
+        </mat-expansion-panel>
+    }    
+</mat-accordion>
+
+@if(disableLoadMoreBtn === false){
+    <div class="load-more">
+        <button mat-raised-button (click)="loadMoreQuestions()">Load More Questions</button>
+    </div>
+}

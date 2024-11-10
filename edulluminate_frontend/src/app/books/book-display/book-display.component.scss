@@ -1,0 +1,28 @@
+.book-display {
+    width: 90%;
+    margin: 24px auto;
+    padding: 24px;
+}
+
+.chapters {
+    flex-direction: column;
+    margin-top: 12px
+}
+
+.chapter {
+
+    margin-bottom: 8px;
+   
+    overflow: hidden;
+    justify-content: flex-start;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: grey;
+        }
+    }
+}

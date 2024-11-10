@@ -1,0 +1,49 @@
+#spring.application.name=school-service
+spring:
+  config:
+    import: optional:configserver:http://localhost:8081
+  application:
+    name: school-service
+#  datasource:
+#    hikari:
+#      maxLifeTime: 600000 #10 minutes wait time
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=school
+#    username: postgres
+#    password: admin
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+##    hibernate:
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: http://localhost:8080/realms/myrealm
+#
+#server:
+#  port: 8888
+
+#security:
+#  basic:
+#    enabled=false:
+
+#  security:
+#    basic:
+#      enabled: false
+#    user:
+#      name: user
+#      password: pwd
+#  management:
+#    security:
+#      enabled: false
+
+#logging:
+#  level:
+#    org.springframework.web: DEBUG
+#    guru.springframework.controllers: DEBUG
+#    org.hibernate: DEBUG
+#    org: INFO

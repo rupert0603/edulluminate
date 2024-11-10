@@ -1,0 +1,39 @@
+<!-- <mat-drawer-container class="example-container" hasBackdrop="false">
+  <mat-drawer #drawer mode="side">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <app-toolbar (sideNavToggleEvent)="drawer.toggle()"></app-toolbar> -->
+
+<div>
+  <h1 class="title">Edulluminate</h1>
+  <form class="example-form" (ngSubmit)="onSubmit($event)" [formGroup]="searchForm">
+    <div class="search-bar">
+      <mat-form-field class="form-field">
+        <mat-label>Search School For Reviews</mat-label>
+        <input matInput placeholder="Search School" (keyup)="search(getValue($event))"
+          formControlName="searchText" (keydown.enter)="onEnter($event)">
+        <button matSuffix mat-icon-button aria-label="Search" class="search-btn" type="submit">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+<div class="search-results">
+  <app-school-result *ngFor="let school of schools"
+    [school]="school"
+  ></app-school-result>
+
+  @if(disableLoadMoreBtn === false){
+    <div class="load-more">
+        <button mat-raised-button (click)="loadMoreSchools()">Load More Schools</button>
+    </div>
+  }
+</div>
+  <!-- </mat-drawer-content>
+</mat-drawer-container> -->
+
+<!-- https://stackoverflow.com/questions/52375765/angular-6-add-input-on-enter-key -->

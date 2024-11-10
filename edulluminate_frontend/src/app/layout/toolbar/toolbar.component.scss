@@ -1,0 +1,25 @@
+button, a {
+    margin: 8px 8px 8px 0;
+    height: 40px;
+    border-radius: 25px;
+}
+.nav-bar {
+    display: flex;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.title {
+    margin: 8px 8px 8px 0;
+
+    a {
+        color: black;
+        text-decoration: none;
+    
+        &:hover {
+            color: grey;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<div class="school-review">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>{{ school.name }}</mat-card-title>
+            <mat-card-subtitle>{{ school.municipality }} {{ school.taxonomy }} {{ school.country }}</mat-card-subtitle>
+        </mat-card-header>
+
+        @if(keycloak.isLoggedIn()) {
+        <mat-card-actions align="end">
+            <button mat-button (click)="toggleWriteReview()">Write a Review</button>
+        </mat-card-actions>
+        }
+        @else {
+        <mat-card-actions align="end">
+            <button mat-button disabled>Login to write a review</button>
+        </mat-card-actions>
+        }
+
+        @if (doWriteReview) {
+            <app-write-review [schoolId]="school.id" (successAddReviewEvent)="addNewReview($event)"></app-write-review>
+        }
+        
+    </mat-card>
+
+    @if(reviews.length > 0) {
+        <h2>Reviews</h2>
+        <app-review *ngFor="let review of reviews"
+            [review]="review"
+        ></app-review>
+    }
+</div>
